@@ -47,7 +47,7 @@
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">Waseem Qamar</div>
                 <div class="text-3">And I'm a <span class="typing"></span></div>
-                <a href="#">Hire me</a>
+                <a href="https://www.linkedin.com/in/waseem-qamar-b02b41183/">Hire me</a>
             </div>
         </div>
     </section>
@@ -264,7 +264,7 @@
                                   <li><a href="https://web.facebook.com" target="_blank"><span class="ico-circle"><i class="bi bi-facebook"></i></span></a></li>
                                   <li><a href=""><span class="ico-circle"><i class="bi bi-instagram"></i></span></a></li>
                                   <li><a href=""><span class="ico-circle"><i class="bi bi-twitter"></i></span></a></li>
-                                  <li><a href=""><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
+                                  <li><a href="https://www.linkedin.com/in/waseem-qamar-b02b41183/"><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
                                 </ul>
                               </div>
                             </center>
@@ -274,21 +274,27 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form action="https://formsubmit.com/imwasim902@gmail.com" method="POST">
+                    <!-- imwasim902@gmail.com -->
+                    <form action="https://formsubmit.co/21c9c3e75180bb75fa898d99b3f1b861" method="POST">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" required>
+                                <input type="text" name="name" placeholder="Name" required>
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" name="email" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Subject" required>
+                            <input type="text" name="subject" placeholder="Subject" required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                            <textarea cols="30" rows="10" name="message" placeholder="Message.." required></textarea>
                         </div>
+                        <!-- Hidden Fields -->
+                        <input type="hidden" name="_subject" value="New Form Submission!">
+                        <input type="hidden" name="_autoresponse" value="Thank you for contacting us! We'll get back to you soon.">
+                        <input type="hidden" name="_next" value="thank-you.html"> <!-- Redirect to Thank You page -->
+                        <!-- Submit Button -->
                         <div class="button-area">
                             <button type="submit">Send message</button>
                         </div>
