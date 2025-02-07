@@ -328,68 +328,117 @@ section .title::after{
 }
 
 /* services section styling */
-.services, .teams{
-    color:#fff;
+.services, .teams {
+    color: #fff;
     background: #111;
+    padding: 60px 0;
 }
+
 .services .title::before,
-.teams .title::before{
+.teams .title::before {
     background: #fff;
 }
+
 .services .title::after,
-.teams .title::after{
+.teams .title::after {
     background: #111;
     content: "what i provide";
 }
-.services .serv-content .card{
-    width: calc(33% - 20px);
+
+/* Improved grid layout for service cards */
+.services .serv-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.services .serv-content .card {
+    width: 300px; /* Fixed width for consistency */
+    height: 350px; /* Fixed height for consistency */
     background: #222;
     color: aliceblue;
     text-align: center;
-    border-radius: 6px;
-    padding: 50px 25px;
+    border-radius: 12px;
+    padding: 40px 25px;
     cursor: pointer;
     transition: all 0.3s ease;
-}
-.services .serv-content .card:hover{
-    background: #2aabe4;
-}
-.fluter{
-    width: 60px;
-    height: 60px;
-    border-radius: 20%;
-}
-.dart{
-    width: 50px;
-    height: 50px;
-    border-radius: 20%;
-}
-.api{
-    width: 45px;
-    height: 45px;
-    border-radius: 20%;
-}
-.services .serv-content .card .box{
-    transition: all 0.3s ease;
-}
-.services .serv-content .card:hover .box{
-    transform: scale(1.05);
-}
-.services .serv-content .card i{
-    font-size: 50px;
-    color: #2aabe4;
-    transition: color 0.3s ease;
-}
-.services .serv-content .card:hover i{
-    color: #fff;
-}
-.services .serv-content .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* skills section styling */
+.services .serv-content .card:hover {
+    background: #2aabe4;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(42, 171, 228, 0.3);
+}
+
+/* Consistent image sizing */
+.services .serv-content .card i img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+.services .serv-content .card .box {
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.services .serv-content .card:hover .box {
+    transform: scale(1.02);
+}
+
+.services .serv-content .card .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 15px 0;
+    color: #2aabe4;
+}
+
+.services .serv-content .card:hover .text {
+    color: #fff;
+}
+
+.services .serv-content .card p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    color: #ccc;
+}
+
+.services .serv-content .card:hover p {
+    color: #fff;
+}
+
+/* Responsive design */
+@media (max-width: 991px) {
+    .services .serv-content {
+        gap: 20px;
+    }
+    
+    .services .serv-content .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .services .serv-content .card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
 
 .skills .title::after{
     content: "what i know";
