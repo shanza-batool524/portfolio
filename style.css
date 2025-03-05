@@ -10,6 +10,11 @@
 html{
     scroll-behavior: smooth;
 }
+
+.logo img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto;
+}
 /* icon for facebook instagram etc */
 .socials {
     padding: 1.5rem 0;
@@ -285,7 +290,9 @@ section .title::after{
     width: 45%;
 }
 .about .about-content .left .img{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)) , url(./images/CV.jpg);
+    background-image:
+     /* linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)) */
+    url(./images/CV.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
